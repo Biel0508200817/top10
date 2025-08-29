@@ -1,0 +1,93 @@
+/* ===== Reset Básico ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Arial", sans-serif;
+  line-height: 1.6;
+  background: #0d1117; /* fundo escuro estilo F1 */
+  color: #e6edf3;
+}
+
+/* ===== Cabeçalho ===== */
+h1 {
+  color: #ff2d55; /* vermelho vibrante inspirado na F1 */
+  font-size: 1.8rem;
+  margin: 20px 0 10px;
+  text-align: center;
+}
+
+p {
+  margin: 10px 0;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1rem;
+}
+
+/* ===== Autor e Data ===== */
+p strong {
+  color: #ffd700; /* dourado destaque */
+}
+
+p:first-of-type {
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+p:nth-of-type(2) {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #9ba1a6;
+}
+
+/* ===== Seções dos Pilotos ===== */
+img {
+  display: block;
+  margin: 15px auto;
+  max-width: 90%;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+h1 + img {
+  margin-top: 5px;
+}
+
+p:has(+ h1) {
+  font-weight: bold;
+  text-align: center;
+  margin-top: 30px;
+  font-size: 1.2rem;
+  color: #58a6ff;
+}
+
+/* ===== Estrutura Container ===== */
+body {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* ===== Destaques ===== */
+strong {
+  color: #ff8a00;
+}
+
+/* ===== Numeração dos pilotos ===== */
+p:has(+ h1)::before {
+  content: "🏎 ";
+}
+
+/* ===== Rodapé (caso adicione) ===== */
+footer {
+  margin-top: 40px;
+  padding: 20px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #9ba1a6;
+  border-top: 1px solid #30363d;
+}
